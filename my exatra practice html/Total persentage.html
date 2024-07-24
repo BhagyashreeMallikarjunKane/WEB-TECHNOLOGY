@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Total percentage</title>
+<script type="text/JavaScript">
+function result()
+{
+var a,b,c,d,e,f,g,t,p
+a=parseInt(document.getElementById('t1').value);
+b=parseInt(document.getElementById('t2').value);
+c=parseInt(document.getElementById('t3').value);
+d=parseInt(document.getElementById('t4').value);
+e=parseInt(document.getElementById('t5').value);
+f=parseInt(document.getElementById('t6').value);
+g=parseInt(document.getElementById('t7').value);
+t=a+b+c+d+f+g;
+p=t/7;
+
+
+document.getElementById("demo").innerHTML="Total:"+t+ "<br>"+"percentage:"+p;
+//document.write("total marks:"+t+"<br>");
+//document.write("total percentage:"+p+"<br>");
+}
+</script>
+</head>
+<body>
+<h1 align="center">Enter student marks</h1>
+<input type="text" id="t1" placeholder="IT"><br>
+<input type="text" id="t2" placeholder="ENGLISH"><br>
+<input type="text" id="t3" placeholder="PHYSICS"><br>
+<input type="text" id="t4" placeholder="CHEMISTRY"><br>
+<input type="text" id="t5" placeholder="BIOLOGY"><br>
+<input type="text" id="t6" placeholder="MATHS"><br>
+<input type="text" id="t7" placeholder="MARATHI"><br>
+<input type="button" value="click" onClick="result()"><br>
+<div id="demo"></div>
+
+</body>
+</html>

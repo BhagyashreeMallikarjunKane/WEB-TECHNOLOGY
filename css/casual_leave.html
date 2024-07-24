@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+       
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #4be1eb;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: black;
+        }
+        h2 {
+            text-align: center;
+            background-color: rgb(62, 59, 253);
+           /* background-color: #2600ff;*/
+            font-weight: bold;
+            color: white;
+            border-radius: 10px;
+           
+            padding: 10px;
+            
+        }
+        .input-control {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+      
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #2600ff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #8091a2;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <form id="form" action="/">
+            <h2>Casual Leave Application</h2>
+           
+            <div class="input-control">
+                <label for="Name">Name</label>
+                <input id="Name" name="Name" type="text">
+               
+            </div>
+            <div class="input-control">
+                <label for="Reason">Reason</label>
+                <input id="Reason"name="Reason" type="text">
+                
+            </div>
+            <div class="input-control">
+                <label for="Days">Days</label>
+                <input id="Days"name="Days" type="text">
+              
+            </div>
+            <div class="input-control">
+                <label for="Date">Start Date</label>
+                <input id="Date"name="Date" type="Date">
+             
+            </div>
+            <div class="input-control">
+                <label for="Date">End Date</label>
+                <input id="Date"name="Date" type="Date">
+             
+            </div>
+            <button type="submit">submit</button>
+        </form>
+    </div>
+</body>
+</html>

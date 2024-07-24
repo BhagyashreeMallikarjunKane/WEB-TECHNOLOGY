@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+       
+        .container {
+            max-width: 400px;
+            background-color: #4be1eb;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: black;
+            text-align: center;
+        }
+        h2 {
+            background-color: rgb(62, 59, 253);
+            font-weight: bold;
+            color: white;
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 0;
+        }
+        .input-control {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+      
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #2600ff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #8091a2;
+        }
+
+        /* Styles for table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="form" action="/">
+            <h2>Casual Leave Application</h2>
+           
+            <div class="input-control">
+                <label for="Name">Name</label>
+                <input id="Name" name="Name" type="text">
+            </div>
+            <div class="input-control">
+                <label for="Reason">Reason</label>
+                <input id="Reason" name="Reason" type="text">
+            </div>
+            <div class="input-control">
+                <label for="Days">Days</label>
+                <input id="Days" name="Days" type="text">
+            </div>
+            <div class="input-control">
+                <label for="StartDate">Start Date</label>
+                <input id="StartDate" name="StartDate" type="date">
+            </div>
+            <div class="input-control">
+                <label for="EndDate">End Date</label>
+                <input id="EndDate" name="EndDate" type="date">
+            </div>
+            <button type="button" onclick="printFormData()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function printFormData() {
+            var name = document.getElementById('Name').value;
+            var reason = document.getElementById('Reason').value;
+            var days = document.getElementById('Days').value;
+            var startDate = document.getElementById('StartDate').value;
+            var endDate = document.getElementById('EndDate').value;
+
+            var table = document.createElement('table');
+            var tbody = document.createElement('tbody');
+
+            var rowData = [
+                ["Name", name],
+                ["Reason", reason],
+                ["Days", days],
+                ["Start Date", startDate],
+                ["End Date", endDate]
+            ];
+
+            rowData.forEach(function(row) {
+                var tr = document.createElement('tr');
+                row.forEach(function(cellData) {
+                    var td = document.createElement('td');
+                    td.textContent = cellData;
+                    tr.appendChild(td);
+                });
+                tbody.appendChild(tr);
+            });
+
+            table.appendChild(tbody);
+            document.body.appendChild(table);
+        }
+    </script>
+</body>
+</html>

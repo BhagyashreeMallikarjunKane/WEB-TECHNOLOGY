@@ -1,0 +1,80 @@
+    .container {
+        background-color: bisque;
+        width: 1000px;
+        height: 500px;
+        margin: 100px;
+        padding-top: 60px;
+        padding-left: 25px;
+    }
+    
+    .font {
+        border: 2px solid black;
+        width: 400px;
+        height: 270px;
+        background-color: white;
+        margin: 70px;
+    }
+    
+    .photo {
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+    
+    .name {
+        width: 250px;
+        height: 70px;
+        margin-left: 125px;
+        margin-top: -130px;
+    }
+    
+    .adharnumber {
+        height: 150px;
+        margin-left: 155px;
+        margin-top: 65px;
+    }
+    
+    
+    
+    
+    .identy {
+        width: 400px;
+        height: 120px;
+        text-align: center;
+        margin-top: -130px;
+        justify-content: center;
+        border-top:tomato 2px solid ;
+    }
+    
+    .back {
+        border: 2px solid black;
+        width: 400px;
+        height: 270px;
+        background-color: white;
+        margin-left: 450px;
+        margin-top: -370px;
+    }
+    
+    .QRcode {
+        margin-left: 300px;
+        margin-top: -110px;
+    }
+    
+    .address {
+        margin-left: 15px;
+    }
+    
+    .adharnumbers {
+        width: 350px;
+        height: 150px;
+        margin-left: 155px;
+        margin-top: -30px;
+    }
+    
+    
+    
+    .info {
+        background-color: white;
+        margin-left: 0px;
+        margin-top: -120px;
+        border-top:tomato 2px solid ;
+    }

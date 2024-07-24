@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+       
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #4be1eb;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: black;
+        }
+        h2 {
+            text-align: center;
+            background-color: rgb(62, 59, 253);
+           /* background-color: #2600ff;*/
+            font-weight: bold;
+            color: white;
+            border-radius: 10px;
+           
+            padding: 10px;
+            
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="Depatartment"],
+        input[type="place"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #2600ff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #8091a2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+            <h2>APPLICATION FOR ON DUTY</h2>
+        
+        <form action="submit_application.php" method="post">
+            <div class="form-group">
+                <label for="name">Mr/Mrs:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="department">Department:</label>
+                <input type="text" id="department" name="department" required>
+            </div>
+            <div class="form-group">
+                
+                <label for="Reason for the Temporary Duty">Reason for the Temporary Duty:</label>
+                <input type="text" id="reason" name="reason" required>
+            </div>
+            <div class="form-group">
+                <p>Date,Time and Place where proceeding</p>
+                <label for="Date">date:</label>
+                <input type="date" id="date" name="date" required>
+                <label for="Time">time:</label>
+                <input type="text" id="time" name="time" required>
+                <label for="Place">Place:</label>
+                <input type="place" id="place" name="place" required>
+            </div>
+            <div class="form-group">
+                <p>Expected Date & Time of arrival</p>
+                <label for="Date">date:</label>
+                <input type="date" id="date" name="date" required>
+                <label for="Time">time:</label>
+                <input type="text" id="time" name="time" required>
+            </div>
+
+            <div class="form-group">
+                
+                <label for="Halting Place">Halting Place:</label>
+                <input type="text" id="reason" name="reason" required>
+                    
+              </div>
+            <div class="form-group">
+                <label>Expenditure to be borne by:</label>
+                <input type="radio" id="Institute" name="Institute" value="Institute" required>
+                <label for="Institute">Institute</label>
+                <input type="radio" id="Other Party" name="Other Partyr" value="Other Party" required>
+                <label for="Other Party">Other Party</label>
+                <input type="radio" id="Individual" name="Individual" value="Individual" required>
+                <label for="Individual">Individual</label>
+            </div>
+
+            <!-- Add more fields as needed -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

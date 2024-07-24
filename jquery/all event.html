@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Operations</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+  #box {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+  }
+  #animated-box {
+    width: 100px;
+    height: 100px;
+    background-color: lightgreen;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+    line-height: 100px;
+  }
+</style>
+</head>
+<body>
+
+<div id="box">Click Me</div>
+<div id="animated-box">Animate Me</div>
+<input type="text" id="inputField" placeholder="Type here...">
+<form id="form">
+  <input type="submit" value="Submit Form">
+</form>
+
+<script>
+$(document).ready(function(){
+  // Click event
+  $('#box').on('click', function(){
+    alert('Click event triggered!');
+  });
+
+  // Change event
+  $('#inputField').on('change', function(){
+    alert('Input field value changed to: ' + $(this).val());
+  });
+
+  // Focus and blur events
+  $('#inputField').on('focus blur', function(event){
+    if (event.type === 'focus') {
+      console.log('Input field focused');
+    } else {
+      console.log('Input field blurred');
+    }
+  });
+
+  // Resize event
+  $(window).on('resize', function(){
+    console.log('Window resized');
+  });
+
+  // Form submit event
+  $('#form').submit(function(e){
+    e.preventDefault();
+    alert('Form submitted!');
+  });
+
+  // Key press events
+  $(document).on('keyup keydown keypress', function(event){
+    console.log('Key ' + event.type + ': ' + event.key);
+  });
+
+  // Hide and show element
+  $('#box').on('click', function(){
+    $('#animated-box').hide(1000).show(1000);
+  });
+
+  // Fade in and fade out element
+  $('#animated-box').on('click', function(){
+    $(this).fadeOut(1000).fadeIn(1000);
+  });
+
+  // Fade toggle element
+  $('#animated-box').on('click', function(){
+    $(this).fadeToggle(1000);
+  });
+
+  // Fade to element
+  $('#animated-box').on('click', function(){
+    $(this).fadeTo(1000, 0.5);
+  });
+
+  // Slide down and slide up element
+  $('#animated-box').on('click', function(){
+    $(this).slideDown(1000).slideUp(1000);
+  });
+
+  // Slide toggle element
+  $('#animated-box').on('click', function(){
+    $(this).slideToggle(1000);
+  });
+
+  // Stop animation
+  $('#animated-box').on('click', function(){
+    $(this).stop();
+  });
+
+  // Callback chaining
+  $('#animated-box').on('click', function(){
+    $(this).fadeOut(1000, function(){
+      $(this).fadeIn(1000, function(){
+        $(this).slideUp(1000);
+      });
+    });
+  });
+
+  // Animation
+  $('#animated-box').on('click', function(){
+    $(this).animate({
+      width: '200px',
+      height: '200px',
+      opacity: 0.5,
+      marginLeft: '50px',
+      marginTop: '50px'
+    }, 1000);
+  });
+});
+</script>
+
+</body>
+</html>
